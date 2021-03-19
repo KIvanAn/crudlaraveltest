@@ -34,19 +34,20 @@ services:
         networks:
             - sail
         healthcheck:
-          test: ["CMD", "mysqladmin", "ping"]
+            test: ["CMD", "mysqladmin", "ping"]
     phpmyadmin:
-      depends_on:
-        - mysql
-      image: phpmyadmin/phpmyadmin
-      restart: always
-      ports:
-        - '8080:80'
-      environment:
-        PMA_HOST: mysql
-        MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-      networks:
-        - sail
+        depends_on:
+            - mysql
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - '8080:80'
+        environment:
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
