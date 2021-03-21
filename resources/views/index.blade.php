@@ -6,9 +6,9 @@
     <a href="{{ route('users.create') }}" class="btn btn-primary">Create user</a>
 </div>
 
-<div class="card">
+<div class="card mb-3">
     <div class="card-body">
-        <table class="table">
+        <table class="table table-sm">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -40,5 +40,8 @@
             </tbody>
         </table>
     </div>
+</div>
+<div class="pagination">
+    {{ $users->links() }}
 </div>
 @endsection
