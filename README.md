@@ -1,4 +1,5 @@
-## Launch project
+## Simple CRUD on Laravel 8
+### Launch project:
 
 - **install PHP-7.4+**
 - **install Composer**
