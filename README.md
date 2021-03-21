@@ -12,3 +12,4 @@
 - **php artisan key:generate**
 - **./vendor/bin/sail up**
 - **./vendor/bin/sail artisan migrate --seed**
+- **go to http://localhost**
