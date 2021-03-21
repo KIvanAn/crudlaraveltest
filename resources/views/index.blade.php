@@ -21,9 +21,15 @@
                 @foreach ($users as $user)
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td><a href="{{ route('users.edit', $user) }}" class="btn btn-success">Edit</a></td>
+                    <td>
+                        <a href="{{ route('users.show', $user) }}">{{ $user->name }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ route('users.show', $user) }}">{{ $user->email }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ route('users.edit', $user) }}" class="btn btn-success">Edit</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
